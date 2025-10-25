@@ -1,16 +1,42 @@
-# React + Vite
+# React Starter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto base con Vite + React configurado para desarrollo moderno.
 
-Currently, two official plugins are available:
+## 🧰 Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js 18+
+- npm 9+
 
-## React Compiler
+## 🚀 Comandos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Acción                        | Comando           |
+| ----------------------------- | ----------------- |
+| Iniciar entorno de desarrollo | `npm run dev`     |
+| Compilar para producción      | `npm run build`   |
+| Previsualizar build           | `npm run preview` |
+| Revisar errores de lint       | `npm run lint`    |
+| Formatear código              | `npm run format`  |
 
-## Expanding the ESLint configuration
+## 📂 Estructura del proyecto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+src/
+assets/ # imágenes, fuentes, svg
+components/ # componentes UI pequeños
+features/ # módulos funcionales grandes
+hooks/ # custom hooks reutilizables
+lib/ # funciones utilitarias
+pages/ # páginas para routing
+styles/ # CSS global o Tailwind base
+
+## 🧱 Configuración
+
+- **ESLint + Prettier + EditorConfig** integrados para mantener estilo consistente.
+- **Husky** ejecuta verificación antes de cada commit.
+
+## 🔧 Alias de import
+
+```js
+import Component from '@/components/Button'
+Configurado en vite.config.js para apuntar a src/.
+
+```
