@@ -1,0 +1,25 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:vitest/recommended",
+    "prettier"
+  ],
+  "plugins":["react","react-hooks","vitest"],
+  "parserOptions": { "ecmaVersion": "latest", "sourceType": "module" },
+  "settings": { "react": { "version": "detect" } },
+  "overrides": [{
+    "files": ["**/*.{test,spec}.{js,jsx,ts,tsx}"],
+    "env":{
+      "vitest/globals": true,
+      "jsdom": true
+    }
+  }],
+  "rules": { "react/prop-tpes": "off" }
+}
